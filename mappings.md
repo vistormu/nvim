@@ -30,6 +30,14 @@
 - Next: <C-down>
 - Complete: <C-right>
 
+## Terminal
+
+- Toggle: <C-\>
+
+## Nerdtree
+
+- Toggle: <leader>nt
+
 ## Vim
 
 - Move selected lines up: <S-up>
