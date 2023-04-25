@@ -122,4 +122,8 @@ return require('packer').startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
 
   use "preservim/nerdtree"
+
+  use "tpope/vim-surround"
+
+  use = "tell-k/vim-autopep8"
 end)

@@ -1,3 +1,5 @@
+vim.cmd("set guicursor=i:hor25")
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
