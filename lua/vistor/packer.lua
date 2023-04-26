@@ -125,5 +125,7 @@ return require('packer').startup(function(use)
 
   use "tpope/vim-surround"
 
-  use = "tell-k/vim-autopep8"
+  use "tell-k/vim-autopep8"
+
+  use "github/copilot.vim"
 end)

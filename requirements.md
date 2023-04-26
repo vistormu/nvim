@@ -24,3 +24,6 @@ git clone https://github.com/github/copilot.vim.git \
 ```
 sudo apt install xclip
 ```
+
+- Nerd font:
+

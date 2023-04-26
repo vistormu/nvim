@@ -10,10 +10,7 @@ lsp.ensure_installed({
 local cmp = require('cmp')
 cmp.setup({
     mapping = {
-        ['<C-up>'] = cmp.mapping.select_prev_item(cmp_select),
-        ['<C-down>'] = cmp.mapping.select_next_item(cmp_select),
         ['<Tab>'] = cmp.mapping.confirm({select = true}),
-        ['<C-left>'] = cmp.mapping.complete(),
     }
 })
 
