@@ -7,5 +7,5 @@ local function SuggestOneCharacter()
 end
 
 local map = vim.keymap.set
-map('i', '<C-right>', SuggestOneCharacter, {expr = true, remap = false})
-map("i", "<C-S-right>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+map('i', '<C-right>', SuggestOneCharacter, {expr = true, remap = false, silent = true, noremap = true, replace_keycodes = false})
+map("i", "<C-S-right>", 'copilot#Accept("<CR>")', {expr = true, remap = false, silent = true, noremap = true, replace_keycodes = false})
