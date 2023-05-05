@@ -27,3 +27,23 @@ sudo apt install xclip
 
 - Nerd font:
 
+Download from webpage:
+```
+https://www.nerdfonts.com/font-downloads
+```
+
+Unzip:
+```
+unzip /path/to/file
+```
+sudo mv /path/to/font/* /usr/share/fonts/
+
+Build the font cache:
+```
+fc-cache -fv
+```
+
+```
+fc-list
+gsetting set org.gnome.desktop.interface monospace-font-name 'Font 14'
+```
