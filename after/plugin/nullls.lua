@@ -4,7 +4,7 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
     sources = {
         null_ls.builtins.formatting.autopep8.with({
-            args = { "--max-line-length", "200" },
+            extra_args = { "--max-line-length", "200" },
         }),
     },
     on_attach = function(client, bufnr)
