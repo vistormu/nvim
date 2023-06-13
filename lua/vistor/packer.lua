@@ -5,10 +5,12 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Telescope is a fuzzy finder.
+    use 'BurntSushi/ripgrep'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { {'nvim-lua/plenary.nvim'}
+    }
     }
 
     -- Rose pine is a beautiful theme.
@@ -59,7 +61,7 @@ return require('packer').startup(function(use)
     use('tpope/vim-commentary')
 
     -- Auto pairs is a bracket pairer.
-    use('jiangmiao/auto-pairs')
+    use {'windwp/nvim-autopairs'}
 
     -- This plugin is a more beautiful version of the default netrw.
     use 'prichrd/netrw.nvim'
