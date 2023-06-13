@@ -47,3 +47,8 @@ fc-cache -fv
 fc-list
 gsetting set org.gnome.desktop.interface monospace-font-name 'Font 14'
 ```
+
+- Ripgrep for telescope (ARM64 devices only)
+```
+sudo apt install ripgrep
+```
