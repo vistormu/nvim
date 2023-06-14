@@ -16,10 +16,8 @@ return require('packer').startup(function(use)
     use({ 
         'rose-pine/neovim', 
         as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine')
-        end
     })
+    use {"catppuccin/nvim", as = "catppuccin"}
 
     -- Treesitter is a syntax highlighter.
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -70,8 +68,8 @@ return require('packer').startup(function(use)
 
     -- Lualine is a cool highly customizable statusline.
     use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
     -- Vim vinegar adds some cool features to netrw.
