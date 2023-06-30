@@ -47,6 +47,5 @@ vim.opt.colorcolumn = ""
 vim.g.mapleader = " "
 
 -- Set the spell checker
-vim.opt.spelllang = "en_us"
-vim.opt.spell = true
--- vim.opt.spellignore = {"vclog", }
+-- vim.opt.spelllang = "en_us"
+-- vim.opt.spell = true

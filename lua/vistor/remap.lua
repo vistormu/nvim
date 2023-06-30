@@ -4,6 +4,10 @@ vim.g.mapleader = " "
 vim.keymap.set("v", "<S-Down>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<S-Up>", ":m '<-2<CR>gv=gv")
 
+-- Indent and unindent selection
+vim.keymap.set("v", "<Tab>", ">gv")
+vim.keymap.set("v", "<S-Tab>", "<gv")
+
 -- Move half page up and down
 vim.keymap.set("n", "<C-Down>", "<C-d>zz")
 vim.keymap.set("n", "<C-Up>", "<C-u>zz")
@@ -24,3 +28,5 @@ vim.keymap.set("n", "<leader>nl", "o<Esc>")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+
