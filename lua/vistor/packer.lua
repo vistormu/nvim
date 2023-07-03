@@ -121,4 +121,7 @@ return require('packer').startup(function(use)
     -- Null-ls is a cool way to add formatting.
     use "jose-elias-alvarez/null-ls.nvim"
 
+    -- VimTex implements latex support
+    use "lervag/vimtex"
+
 end)

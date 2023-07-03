@@ -1,31 +1,33 @@
 # Requierements
 
-- Packer:
+## Packer
+Packer is the package manager of neovim.
+
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-- Pyright:
+## Pyright
+Pyright is an LSP for Python.
+
+Install the latest version of `NodeJS` and `npm`:
 ```
-sudo apt install nodejs npm
+curl -fsSL hhtps://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt install -y nodejs npm
 ```
+
+Then install Pyright
 ```
 npm i -g pyright
 ```
 
-- Copilot:
-```
-git clone https://github.com/github/copilot.vim.git \
-  ~/.config/nvim/pack/github/start/copilot.vim
-```
-
-- Clipboard support:
+## Clipboard support:
 ```
 sudo apt install xclip
 ```
 
-- Nerd font:
+## Nerd font:
 
 Download from webpage:
 ```
@@ -48,7 +50,21 @@ fc-list
 gsetting set org.gnome.desktop.interface monospace-font-name 'Font 14'
 ```
 
-- Ripgrep for telescope (ARM64 devices only)
+## Ripgrep for telescope
+If telescope does not work, you have to install `ripgrep`:
 ```
 sudo apt install ripgrep
+```
+
+## Latex
+Download the LaTeX compiler for your device.
+
+Linux:
+```
+sudo apt install latexmk
+```
+
+Install the recommended texlive fonts:
+```
+sudo apt install texlive-fonts-recommended
 ```
