@@ -29,4 +29,6 @@ vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
-
+-- Go up and down trough long soft-wrapped lines
+vim.keymap.set("n", "<Down>", "gj")
+vim.keymap.set("n", "<Up>", "gk")
