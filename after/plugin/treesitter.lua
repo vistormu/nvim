@@ -1,19 +1,11 @@
 local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-parser_config.kimchi = {
-    install_info = {
-        url = "~/projects/kimchilang/tree-sitter-kimchi",
-        files = {"src/parser.c"},
-    },
-}
 
 require('nvim-treesitter.configs').setup {
-  ensure_installed = { "python",  "kimchi"},
-  
-  sync_install = true,
-
-  auto_install = true,
-
+  ensure_installed = {},
   highlight = {
-    enable = true,
+      enable = true,
   },
 }
+
+vim.api.nvim_command('autocmd BufRead,BufNewFile *.prox setfiletype html')
+vim.api.nvim_command('autocmd BufRead,BufNewFile *.kimchi setfiletype rust')
