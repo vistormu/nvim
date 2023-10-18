@@ -18,12 +18,6 @@ vim.opt.smartindent = true
 -- Wrap lines
 -- vim.opt.wrap = false
 
--- Set undotree to be the default undo history
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
-
 -- Highlight and increment search results
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
@@ -45,7 +39,3 @@ vim.opt.colorcolumn = ""
 
 -- Set the leader to the space
 vim.g.mapleader = " "
-
--- Set the spell checker
--- vim.opt.spelllang = "en_us"
--- vim.opt.spell = true

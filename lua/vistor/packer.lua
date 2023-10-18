@@ -12,11 +12,7 @@ return require('packer').startup(function(use)
     }
     }
 
-    -- Rose pine is a beautiful theme.
-    use({ 
-        'rose-pine/neovim', 
-        as = 'rose-pine',
-    })
+    -- Catppuccin is a beautiful theme.
     use {"catppuccin/nvim", as = "catppuccin"}
 
     -- Treesitter is a syntax highlighter.
@@ -24,12 +20,6 @@ return require('packer').startup(function(use)
 
     -- Harpoon is a cool bookmarking plugin.
     use('theprimeagen/harpoon')
-
-    -- Fugitive is a git wrapper.
-    use('tpope/vim-fugitive')
-
-    -- Undotree is a visual undo history.
-    use('mbbill/undotree')
 
     -- LSP is a language server protocol.
     use {
@@ -60,20 +50,11 @@ return require('packer').startup(function(use)
     -- Auto pairs is a bracket pairer.
     use {'windwp/nvim-autopairs'}
 
-    -- This plugin is a more beautiful version of the default netrw.
-    use 'prichrd/netrw.nvim'
-
-    -- Web devicons are icons for the file explorer.
-    use 'nvim-tree/nvim-web-devicons'
-
     -- Lualine is a cool highly customizable statusline.
     use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
-
-    -- Vim vinegar adds some cool features to netrw.
-    use('tpope/vim-vinegar')
 
     -- Toggleterm is a built in terminal.
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
@@ -90,38 +71,13 @@ return require('packer').startup(function(use)
         end
     }
     
-    -- Which key is a cool keybinding helper.
-    use {
-        'folke/which-key.nvim',
-        config = function()
-            require("which-key").setup {
-            }
-        end
-    }
-
-    -- This plugin is a cool way to manage your todos.
-    use {
-        'folke/todo-comments.nvim',
-        requires = 'nvim-lua/plenary.nvim',
-        config = function()
-            require('todo-comments').setup {
-            }
-        end
-    }
-
-    -- This plugin adds lines to every indent level.
-    use "lukas-reineke/indent-blankline.nvim"
-    
-    -- Vim surround is a cool way to add brackets.
-    use "tpope/vim-surround"
-
     -- Github Copilot.
     use "github/copilot.vim"
     
     -- Null-ls is a cool way to add formatting.
     use "jose-elias-alvarez/null-ls.nvim"
 
-    -- VimTex implements latex support
-    use "lervag/vimtex"
+    -- Web devicons is a cool icon pack.
+    use 'nvim-tree/nvim-web-devicons'
 
 end)

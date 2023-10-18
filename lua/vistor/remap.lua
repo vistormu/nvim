@@ -15,9 +15,6 @@ vim.keymap.set("n", "<C-Up>", "<C-u>zz")
 -- Paste without copying to clipboard
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
--- Select word
-vim.keymap.set("n", "<leader>sw", "viw")
-
 -- Change all concurrences of word
 vim.keymap.set("n", "<leader>cac", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
@@ -34,3 +31,6 @@ vim.keymap.set("n", "<Down>", "gj")
 vim.keymap.set("n", "<Up>", "gk")
 vim.keymap.set("v", "<Down>", "gj")
 vim.keymap.set("v", "<Up>", "gk")
+
+-- Exit to netrw
+vim.keymap.set("n", "-", ":Ex<CR>")
