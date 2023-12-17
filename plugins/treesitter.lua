@@ -8,5 +8,5 @@ require('nvim-treesitter.configs').setup {
 }
 
 -- vim.api.nvim_command('autocmd BufRead,BufNewFile *.prox setfiletype html')
-vim.api.nvim_command('autocmd BufRead,BufNewFile *.prox setfiletype jsdoc')
+vim.api.nvim_command('autocmd BufRead,BufNewFile *.prox setfiletype html')
 vim.api.nvim_command('autocmd BufRead,BufNewFile *.kimchi setfiletype rust')

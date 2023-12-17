@@ -34,3 +34,6 @@ vim.keymap.set("v", "<Up>", "gk")
 
 -- Exit to netrw
 vim.keymap.set("n", "-", ":Ex<CR>")
+
+-- Spell
+vim.keymap.set("n", "<leader>ss", ":setlocal spell!<CR>")
