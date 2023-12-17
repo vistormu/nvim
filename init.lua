@@ -3,6 +3,8 @@ vim.g.maplocalleader = ' '
 
 require('remap')
 require('set')
+require('lazy-bootstrap')
+require('lazy-plugins')
 
 local function load_plugins()
     local fn = vim.fn
