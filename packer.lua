@@ -19,7 +19,12 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
     -- Harpoon is a cool bookmarking plugin.
-    use('theprimeagen/harpoon')
+    use "nvim-lua/plenary.nvim"
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { {"nvim-lua/plenary.nvim"} }
+    }
 
     -- LSP is a language server protocol.
     use {
