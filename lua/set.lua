@@ -36,6 +36,3 @@ vim.opt.updatetime = 50
 
 -- Disable the ugly column
 vim.opt.colorcolumn = "" 
-
--- Set the leader to the space
-vim.g.mapleader = " "

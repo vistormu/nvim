@@ -1,6 +1,12 @@
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+require('remap')
+require('set')
+
 local function load_plugins()
     local fn = vim.fn
-    local plugin_dir = fn.stdpath('config') .. '/plugins'
+    local plugin_dir = fn.stdpath('config') .. '/lua/plugins'
 
     for _, file in ipairs(fn.readdir(plugin_dir)) do
         if file:match('.lua$') then
@@ -11,6 +17,3 @@ local function load_plugins()
 end
 
 load_plugins()
-require('packer')
-require('remap')
-require('set')
