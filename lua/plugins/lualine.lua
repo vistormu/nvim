@@ -116,6 +116,20 @@ ins_left {
   color = { fg = colors.white, gui = 'bold' },
 }
 
+-- Insert mid section. You can make any number of sections in neovim :)
+-- for lualine it's any number greater then 2
+-- ins_left {
+--   function()
+--     return '%='
+--   end,
+-- }
+
+ins_left {
+  'branch',
+  cond = conditions.check_git_workspace,
+  color = { fg = colors.violet, gui = 'bold' },
+}
+
 ins_left {
   'diff',
   -- Is it me or the symbol for modified us really weird
@@ -126,15 +140,6 @@ ins_left {
     removed = { fg = colors.red },
   },
   cond = conditions.hide_in_width,
-}
-
-
--- Insert mid section. You can make any number of sections in neovim :)
--- for lualine it's any number greater then 2
-ins_left {
-  function()
-    return '%='
-  end,
 }
 
 ins_right {
@@ -148,37 +153,43 @@ ins_right {
   },
 }
 
+ins_right {
+  'filetype',
+  cond = conditions.buffer_not_empty,
+  color = { fg = colors.white, gui = 'bold' },
+}
+
 ins_right { 'progress', color = { fg = colors.fg, gui = 'bold' } }
 
-ins_right {
-    'filetype',
-  color = function()
-    -- auto change color according to neovims mode
-    local mode_color = {
-      n = colors.red,
-      i = colors.green,
-      v = colors.blue,
-      [''] = colors.blue,
-      V = colors.blue,
-      c = colors.magenta,
-      no = colors.red,
-      s = colors.orange,
-      S = colors.orange,
-      [''] = colors.orange,
-      ic = colors.yellow,
-      R = colors.violet,
-      Rv = colors.violet,
-      cv = colors.red,
-      ce = colors.red,
-      r = colors.cyan,
-      rm = colors.cyan,
-      ['r?'] = colors.cyan,
-      ['!'] = colors.red,
-      t = colors.red,
-    }
-    return { bg = mode_color[vim.fn.mode()] , fg = colors.bg, gui = 'bold' }
-  end,
-}
+-- ins_right {
+--     'filetype',
+--   color = function()
+--     -- auto change color according to neovims mode
+--     local mode_color = {
+--       n = colors.red,
+--       i = colors.green,
+--       v = colors.blue,
+--       [''] = colors.blue,
+--       V = colors.blue,
+--       c = colors.magenta,
+--       no = colors.red,
+--       s = colors.orange,
+--       S = colors.orange,
+--       [''] = colors.orange,
+--       ic = colors.yellow,
+--       R = colors.violet,
+--       Rv = colors.violet,
+--       cv = colors.red,
+--       ce = colors.red,
+--       r = colors.cyan,
+--       rm = colors.cyan,
+--       ['r?'] = colors.cyan,
+--       ['!'] = colors.red,
+--       t = colors.red,
+--     }
+--     return { bg = mode_color[vim.fn.mode()] , fg = colors.bg, gui = 'bold' }
+--   end,
+-- }
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)

@@ -143,4 +143,8 @@ require('lazy').setup({
 
     -- Web devicons is a cool icon pack.
     'nvim-tree/nvim-web-devicons',
+
+    -- Fugitive is a git wrapper.
+    "tpope/vim-fugitive"
+
 }, {})
