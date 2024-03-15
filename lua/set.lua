@@ -35,4 +35,8 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 
 -- Disable the ugly column
-vim.opt.colorcolumn = "" 
+vim.opt.colorcolumn = ""
+
+-- Spell check
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"

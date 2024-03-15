@@ -14,15 +14,10 @@ vim.keymap.set("n", "<C-Up>", "<C-u>zz")
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
 -- Change all concurrences of word
-vim.keymap.set("n", "<leader>cac", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
-
--- New line
-vim.keymap.set("n", "<leader>nl", "o<Esc>")
+vim.keymap.set("n", "<leader>cac", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gIc<Left><Left><Left>")
 
 -- Copy to system's clipboard
-vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- Go up and down trough long soft-wrapped lines
 vim.keymap.set("n", "<Down>", "gj")
@@ -32,6 +27,3 @@ vim.keymap.set("v", "<Up>", "gk")
 
 -- Exit to netrw
 vim.keymap.set("n", "-", ":Ex<CR>")
-
--- Spell
-vim.keymap.set("n", "<leader>ss", ":setlocal spell!<CR>")
