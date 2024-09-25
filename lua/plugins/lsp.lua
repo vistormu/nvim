@@ -10,7 +10,7 @@ cmp.setup({
 })
 
 vim.api.nvim_set_keymap('n', '<Leader>si', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<Leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
 
 lsp.set_preferences({
     sign_icons = {}
@@ -27,6 +27,16 @@ lsp.set_preferences({
 --         clangdFileStatus = true
 --     }
 -- })
+--
+
+-- Gleam
+-- Configure the Gleam LSP
+lsp.configure('gleam', {
+    cmd = { "gleam", "lsp" },
+    filetypes = { "gleam" },
+    root_dir = require('lspconfig/util').root_pattern('gleam.toml', '.git'),
+    settings = {}
+})
 
 lsp.setup()
 require("mason").setup()

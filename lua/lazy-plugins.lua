@@ -3,6 +3,9 @@ require('lazy').setup({
     -- Plenary is a dependency for telescope.
     'nvim-lua/plenary.nvim',
 
+    -- Web devicons is a cool icon pack and a dependency for some plugins.
+    'nvim-tree/nvim-web-devicons',
+
     -- Telescope is a fuzzy finder.
     {
         'nvim-telescope/telescope.nvim',
@@ -126,6 +129,7 @@ require('lazy').setup({
         end
     },
 
+    -- Trouble is a cool way to show diagnostics.
     {
         "folke/trouble.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -137,14 +141,17 @@ require('lazy').setup({
     -- Github Copilot
     "github/copilot.vim",
 
-    
     -- Null-ls is a cool way to add formatting.
     "jose-elias-alvarez/null-ls.nvim",
 
-    -- Web devicons is a cool icon pack.
-    'nvim-tree/nvim-web-devicons',
-
-    -- Fugitive is a git wrapper.
-    "tpope/vim-fugitive"
+    -- LaTeX
+    {
+        "lervag/vimtex",
+        lazy = false,     -- we don't want to lazy load VimTeX
+        -- tag = "v2.15", -- uncomment to pin to a specific release
+        init = function()
+            -- VimTeX configuration goes here
+        end
+    },
 
 }, {})

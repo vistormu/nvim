@@ -27,3 +27,6 @@ vim.keymap.set("v", "<Up>", "gk")
 
 -- Exit to netrw
 vim.keymap.set("n", "-", ":Ex<CR>")
+
+-- Go to definition in a vertical split
+vim.keymap.set("n", "<leader>gd", "<C-w>v<C-]>")
