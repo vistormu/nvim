@@ -1,5 +1,11 @@
 local map = vim.keymap.set
 
+-- i hate "Q is not an editor command" IT WAS A TYPO!
+map("ca", "Q", "q", { noremap = true })
+map("ca", "W", "w", { noremap = true })
+map("ca", "WQ", "wq", { noremap = true })
+map("ca", "Qall", "qall", { noremap = true })
+
 -- move up and down selection
 map("v", "<S-Down>", ":m '>+1<CR>gv=gv")
 map("v", "<S-Up>", ":m '<-2<CR>gv=gv")
@@ -9,19 +15,16 @@ map("v", "<Tab>", ">gv")
 map("v", "<S-Tab>", "<gv")
 
 -- move half page up and down
-map("n", "<C-Down>", "<C-d>zz")
-map("n", "<C-Up>", "<C-u>zz")
-map("v", "<C-Down>", "<C-d>zz")
-map("v", "<C-Up>", "<C-u>zz")
+map("n", "<C-Down>", "<C-d>")
+map("n", "<C-Up>", "<C-u>")
+map("v", "<C-Down>", "<C-d>")
+map("v", "<C-Up>", "<C-u>")
 
 -- paste without copying to clipboard
 map("x", "<leader>p", '"_dP')
 
 -- change all concurrences of word
 map("n", "<leader>cac", ":%s/<C-r><C-w>/<C-r><C-w>/gIc<Left><Left><Left><Left>")
-
--- copy to system's clipboard
-map("v", "<leader>y", '"+y')
 
 -- go up and down trough long soft-wrapped lines
 map("n", "<Down>", "gj")
@@ -59,18 +62,16 @@ vim.keymap.set(
 )
 
 -- escape characters for proxima
-map("x", "<leader>b", [[:s/\([{}@#\\]\)/\\\1/g<CR>]], { noremap = true, silent = true })
+map("x", "<leader>b", [[:s/\([{}@#\\]\)/\\\1/g<CR>]])
 
 -- sourrounding text with <p> tags
-map("n", "<leader>pp", "<S-o><p><Esc><Down>o</p><Esc>", { noremap = true, silent = true })
+map("n", "<leader>pp", "<S-o><p><Esc><Down>o</p><Esc>")
 
 -- toggle diagnostics
-map("n", "<leader>tt", "<cmd>Trouble diagnostics toggle<cr>", { silent = true, noremap = true })
+map("n", "<leader>tt", "<cmd>Trouble diagnostics toggle<cr>")
 
 -- find string
-map("n", "<leader>fs", function()
-    require("telescope.builtin").live_grep()
-end, { desc = "Grep (Find in files)" })
+map("n", "<leader>fs", require("telescope.builtin").live_grep)
 
 -- harpoon
 map("n", "<C-h>", function()
@@ -80,9 +81,9 @@ end, {})
 
 map("n", "<leader>add", function()
     require("harpoon"):list():add()
-end, {})
+end)
 
 -- lsps nav
-map("n", "<leader>si", "<cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true, silent = true })
--- map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
--- map("n", "<leader>gd", "<C-W>v<C-W>w<cmd>gd", { noremap = true, silent = true })
+map("n", "<leader>si", vim.lsp.buf.hover)
+map("n", "gd", require("telescope.builtin").lsp_definitions)
+map("n", "<leader>gd", "<C-w>vgd", { remap = true })
