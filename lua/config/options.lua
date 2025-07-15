@@ -11,13 +11,6 @@ vim.opt.smartindent = true
 -- wrap lines
 vim.opt.wrap = true
 
--- Highlight and increment search results
--- vim.opt.hlsearch = false
--- vim.opt.incsearch = true
-
--- Set vertical scrolloff to have a minimum of 8 lines
--- vim.opt.scrolloff = 8
-
--- Spell check
--- vim.opt.spell = true
--- vim.opt.spelllang = "en_us"
+-- spell check
+vim.opt.spell = true
+vim.opt.spelllang = "en_us"
