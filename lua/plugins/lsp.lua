@@ -27,4 +27,23 @@ return {
     {
         "github/copilot.vim",
     },
+
+    -- python formatting
+    {
+        "stevearc/conform.nvim",
+        opts = {
+            formatters = {
+                autopep8 = {
+                    prepend_args = { "--max-line-length", "200", "--ignore", "E261" },
+                },
+            },
+            formatters_by_ft = {
+                python = { "autopep8" },
+            },
+            format_on_save = {
+                timeout_ms = 1000,
+                lsp_fallback = true,
+            },
+        },
+    },
 }
