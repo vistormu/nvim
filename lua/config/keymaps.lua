@@ -83,7 +83,12 @@ map("n", "<leader>add", function()
     require("harpoon"):list():add()
 end)
 
--- lsps nav
+-- lsp nav
 map("n", "<leader>si", vim.lsp.buf.hover)
 map("n", "gd", require("telescope.builtin").lsp_definitions)
 map("n", "<leader>gd", "<C-w>vgd", { remap = true })
+
+-- quick make command
+map("n", "<leader>m", function()
+    vim.cmd("make")
+end)

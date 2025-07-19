@@ -40,10 +40,6 @@ return {
             formatters_by_ft = {
                 python = { "autopep8" },
             },
-            format_on_save = {
-                timeout_ms = 1000,
-                lsp_fallback = true,
-            },
         },
     },
 }
