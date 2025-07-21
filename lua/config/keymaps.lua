@@ -92,3 +92,10 @@ map("n", "<leader>gd", "<C-w>vgd", { remap = true })
 map("n", "<leader>m", function()
     vim.cmd("make")
 end)
+
+-- replace spaces for tabs (makefile fix)
+map("n", "<leader>mt", function()
+    vim.opt_local.expandtab = false
+    vim.opt_local.tabstop = 2
+    vim.cmd("%retab!")
+end, { desc = "Makefile: fix leading spaces → tabs" })
